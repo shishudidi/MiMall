@@ -7,11 +7,15 @@
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
-
+import axios from "axios"
 export default {
-  name: 'App',
+  name: 'app',
   components: {
     HelloWorld
+  },
+  mounted(){
+    let url="https://www.fastmock.site/mock/871b3e736e653b99374b7713e4011f9f/boss/user/list";
+    axios.get(url).then(()=>{})
   }
 }
 </script>
