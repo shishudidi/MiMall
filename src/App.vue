@@ -8,14 +8,16 @@
 <script>
 import HelloWorld from './components/HelloWorld.vue'
 import axios from "axios"
+import jsonp from "jsonp"
 export default {
   name: 'app',
   components: {
     HelloWorld
   },
   mounted(){
-    let url="https://www.fastmock.site/mock/871b3e736e653b99374b7713e4011f9f/boss/user/list";
-    axios.get(url).then(()=>{})
+    let url="https://message.bilibili.com/api/tooltip/query.list.do";
+    // axios.get(url).then(()=>{})
+    jsonp(url,()=>{})
   }
 }
 </script>
