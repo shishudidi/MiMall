@@ -7,7 +7,7 @@
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
-import axios from "axios"
+// import axios from "axios"
 import jsonp from "jsonp"
 export default {
   name: 'app',
@@ -15,7 +15,7 @@ export default {
     HelloWorld
   },
   mounted(){
-    let url="https://message.bilibili.com/api/tooltip/query.list.do";
+    let url="/api/common/adver-getadverlistbymarking";
     // axios.get(url).then(()=>{})
     jsonp(url,()=>{})
   }
